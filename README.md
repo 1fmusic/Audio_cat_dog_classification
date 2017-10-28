@@ -7,12 +7,12 @@ I will use the librosa and sklearn libraries heavily for the audio and modeling 
 ## Data 
 All the WAV files contains 16KHz audio and have variable length.
 
-I took out  some of the files that had both cat and dog sounds present or music in the background which left us with 147 cat sounds and 108 dog sounds. 
+I took out  some of the files that had both cat and dog sounds present or music in the background which left us with 147 cat sounds and 108 dog sounds. The files that I kept are in the /cats/ and /dogs/ folders of this repo.
 
 # Visualization
 
 For some initial visualization, load 
-## spectrograms_catdog 
+### spectrograms_catdog  
 
 This notebook allows you to plot the raw wavform (using amplitude (Root Mean Squared)) vs. time, along with the spectrogram. The function calculates the Short Time Fourier Transform (STFT) with a window size of 1024 and plots the real values (magnitude) on a log-frequency scale vs. time (same units as the raw wave for comparison). 
 
@@ -22,7 +22,7 @@ There are some interesting differences and similarities that I pointed out in th
 
 # Exploratory Data Analysis
 
-## cat_dog_SQL_readWav
+### cat_dog_SQL_readWav
 
 I stored the location (path) of the files, and file ID (number associated with each sound) in a SQL table on my EC2 instance (Amazon Web Services). Then, I pulled from this table to create the list of paths and list of IDs to read in for processing. 
 
